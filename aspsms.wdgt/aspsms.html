@@ -1,0 +1,51 @@
+<!--
+ * This file is part of the aspsms Widget
+ *
+ * Version:   0.1 (2006-11-05)
+ * Author:    Silvan Spross <spross@netdot.ch>, Christoph Studer <christoph@studer.tv>
+ * Licensing: Free to use. Contact me before copying 
+ *            anything contained in this widget.
+ * Websites:  http://sisprocom.ch/widgets/aspsms/
+ *            http://studer.tv/projects-widgets.page
+-->
+
+
+<html>
+	<head>
+		<meta >
+		<style type="text/css">
+			@import "aspsms.css";
+		</style>
+		<script type="text/javascript" src="file:///System/Library/WidgetResources/button/genericButton.js" charset="utf-8"></script>
+		<script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+		<script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+		<script type="text/javascript" src="aspsms.js"></script>
+	</head>
+	<body onload="init()">
+			<div id="front">
+				<div id="infoButton"></div>
+				<div class="label" id="recipients-label"><!-- Recipient --></div>
+				<input type="text" id="recipients"/>
+				<img src="ab-icon.png" id="ab-icon"/>
+				<div class="label" id="message-label"><!-- Message --></div>
+				<textarea name="textarea" id="message"></textarea>
+				<div class="small-label" id="num-left-label"></div>
+				<img id="indicator" src="Indicator.gif"/>
+				<div id="send"></div>
+			</div>
+			<div id="back" style="display: none">
+				<div class="label" id="username-label"><!-- Userkey --></div>
+				<input type="text" id="username"/>
+				<div class="label" id="password-label"><!-- Password --></div>
+				<input type="password" id="password"/>
+				<div class="label" id="originator-label"><!-- Originator --></div>
+				<input type="text" id="originator"/>
+				<div class="small-label" id="about">
+					No account? Visit <a href="javascript:widget.openURL('http://aspsms.com/');">aspsms.com</a>!<br/>
+					More <a href="javascript:widget.openURL('http://sisprocom.ch/widgets/aspsms/');">about this widget</a>.</div>
+				<div id="done"></div>
+			</div>
+			<div id="error">Error</div>
+			<div id="msg">Message</div>
+	</body>
+</html>

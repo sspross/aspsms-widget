@@ -1,0 +1,218 @@
+/*********
+ * This file is part of the aspsms Widget
+ *
+ * Version:   0.1 (2006-11-05)
+ * Author:    Silvan Spross <spross@netdot.ch>, Christoph Studer <christoph@studer.tv>
+ * Licensing: Free to use. Contact me before copying 
+ *            anything contained in this widget.
+ * Websites:  http://sisprocom.ch/widgets/aspsms/
+ *            http://studer.tv/projects-widgets.page
+ */
+
+body
+{
+	padding: 0;
+	margin: 0;
+}
+
+#front
+{
+	background-image: url(Default.png);
+	width: 300px;
+	height: 200px;
+	padding-top: 40px;
+}
+
+#back
+{
+	background-image: url(Back.png);
+	width: 300px;
+	height: 200px;
+	padding-top: 40px;
+}
+
+#recipients, #message, #username, #password
+{
+	position: absolute;
+	color: #333333;
+	font-weight: bold;
+	background-color: #eee;
+}
+
+#recipients
+{
+	right: 44px;
+	width: 160px;
+	top: 47px;
+}
+
+#ab-icon
+{
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	cursor: hand;
+	top: 51px;
+	right: 25px;
+}
+
+#message
+{
+	position: absolute;
+	width: 260px;
+	height: 50px;
+	top: 90px;
+	left: 15px;
+}
+
+.label, .small-label
+{
+	color: white;
+	font-weight: bold;
+	font-family: Cracked, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#recipients-label
+{
+	position: absolute;
+	left: 12px;
+	top: 52px;
+}
+
+#message-label
+{
+	position: absolute;
+	left: 12px;
+	top: 70px;
+}
+
+.small-label
+{
+	/* font-weight: normal; */
+	font-size: 10px;
+	color: #555;
+}
+
+#num-left-label
+{
+	position: absolute;
+	left: 15px;
+	top: 145px;
+}
+
+/** SEND BUTTON */
+
+#indicator
+{
+	position: absolute;
+	display: none;
+	right: 90px;
+	bottom: 35px;
+	height: 16px;
+	width:  16px;
+}
+
+#send, #done
+{
+	position:absolute;
+	bottom: 30px;
+	right: 25px;
+	z-index:999;
+	-apple-dashboard-region:dashboard-region(control rectangle);
+}
+
+#infoButton
+{
+	position: absolute;
+	background-color: red;
+	top: 10px;
+	right: 32px;
+}
+
+
+/** BACK */
+
+#username
+{
+	top: 50px;
+	width: 180px;
+	right: 25px;
+	position: absolute;
+}
+
+#password
+{
+	top: 80px;
+	width: 180px;
+	right: 25px;
+	position: absolute;
+}
+
+#originator
+{
+	top: 110px;
+	width: 180px;
+	right: 25px;
+	position: absolute;
+}
+
+#username-label
+{
+	top: 55px;
+	left: 12px;
+	position: absolute;
+}
+
+#password-label
+{
+	top: 85px;
+	left: 12px;
+	position: absolute;
+}
+
+#originator-label
+{
+	top: 115px;
+	left: 12px;
+	position: absolute;
+}
+
+#about
+{
+	position: absolute;
+	top: 138px;
+	left: 16px;
+	width: 250px;
+	line-height: 150%;
+}
+
+#about a
+{
+	color: white;
+	text-decoration: underline;
+}
+
+/** ERROR & MESSAGE */
+
+#error
+{
+	color: red;
+}
+
+#msg
+{
+	color: white;
+}
+
+#error, #msg
+{
+	position: absolute;
+	display: none;
+	font-weight: bold;
+	font-family: Cracked, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 125px;
+	top: 19px;
+	right: 30px;
+}
