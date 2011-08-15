@@ -21,7 +21,7 @@ Features
 Installation
 ------------
 
-1. [Download it](https://github.com/sspross/aspsms-widget/archives/master).
+1. [Download it](https://github.com/downloads/sspross/aspsms-widget/aspsms.wdgt.zip).
 2. Double-click it on the desktop.
 3. Install and accept it.
 4. Get your userkey from [aspsms.com](http://aspsms.com/)
