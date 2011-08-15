@@ -80,11 +80,11 @@ function updateCounter()
 	curr_left = curr_sms*max_len - len;
 	var lbl_elem = document.getElementById('num-left-label');
 	if (curr_sms > 0)
-	{
+    {
 		lbl_elem.innerHTML = curr_sms + ' SMS / ' + curr_left + ' left';
-	}
-	else
+	} else {
 		lbl_elem.innerHTML = 'Please enter a message';
+    }
 }
 
 /**
@@ -130,7 +130,7 @@ function send()
 	var msg_part = null;
 	var start = 0;
 	var done = 0;
-	var statusmsg = ''
+	var statusmsg = '';
 	
 	/* Show progress indicator */
 	document.getElementById('indicator').style.display='block';
@@ -138,59 +138,50 @@ function send()
 	rcp_elem.setAttribute("disabled",true);
 
 	/* Send messages */
-	/*for (var i = 0; i < curr_sms; i++)
-	{*/
-		msg_part = msg /*.substr(start,max_len);*/
-	
-		xmlhttp = new XMLHttpRequest();
-		xmlhttp.open("POST", "http://xml1.aspsms.com:5061/xmlsvr.asp", false);
- 		
- 		var xmltext = "<?xml version='1.0' encoding='ISO-8859-1'?>" +
-			"<aspsms>" +
-				"<Userkey>" + login + "</Userkey>" +
-				"<Password>" + passwd + "</Password>" +
-				"<Originator>" + origin + "</Originator>" +
-				"<AffiliateId>123415</AffiliateId>" +
-				"<Recipient>" +
-					"<PhoneNumber>" + to + "</PhoneNumber>" +
-				"</Recipient>" +
-				"<MessageData>" + encode(msg_part) + "</MessageData>" +
-				"<Action>SendTextSMS</Action>" +
-			"</aspsms>";
- 		
-		xmlhttp.setRequestHeader("Content-Type", "text/xml");
-		xmlhttp.send(xmltext);
-		
-		/*if (curr_sms > 1)
-		{
-			statusmsg = 'Sending message ' + (i+1) + '...';
-		}
-		else
-		{*/
-			statusmsg = 'Sending message...';
-		/*}*/
-		
-		while (xmlhttp.readyState != 4)
-		{
-			showMessage(statusmsg,true);
-		}
-		
-		var xmldoc = (new DOMParser()).parseFromString(xmlhttp.responseText,"text/xml");
-		var errorCode = xmldoc.getElementsByTagName("ErrorCode").item(0).firstChild.nodeValue;
-  		var errorDescription = xmldoc.getElementsByTagName("ErrorDescription").item(0).firstChild.nodeValue;
-		
-		if (errorCode == 1)
-		{
-			done++;
-		}
-		else
-		{
-			showError(errorDescription);
-			break;
-		}
-		
-		start += max_len;
-	/*}*/
+    msg_part = msg;
+
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "http://xml1.aspsms.com:5061/xmlsvr.asp", false);
+    
+    var xmltext = "<?xml version='1.0' encoding='ISO-8859-1'?>" +
+        "<aspsms>" +
+            "<Userkey>" + login + "</Userkey>" +
+            "<Password>" + passwd + "</Password>" +
+            "<Originator>" + origin + "</Originator>" +
+            "<AffiliateId>123415</AffiliateId>" +
+            "<Recipient>" +
+                "<PhoneNumber>" + to + "</PhoneNumber>" +
+            "</Recipient>" +
+            "<MessageData>" + encode(msg_part) + "</MessageData>" +
+            "<Action>SendTextSMS</Action>" +
+        "</aspsms>";
+    
+    xmlhttp.setRequestHeader("Content-Type", "text/xml");
+    xmlhttp.send(xmltext);
+    
+    statusmsg = 'Sending message...';
+    
+    while (xmlhttp.readyState != 4)
+    {
+        showMessage(statusmsg,true);
+    }
+    
+    var xmldoc = (new DOMParser()).parseFromString(xmlhttp.responseText,"text/xml");
+    var errorCode = xmldoc.getElementsByTagName("ErrorCode").item(0).firstChild.nodeValue;
+    var errorDescription = xmldoc.getElementsByTagName("ErrorDescription").item(0).firstChild.nodeValue;
+    
+    if (errorCode == 1)
+    {
+        done++;
+    }
+    else
+    {
+        showError(errorDescription);
+        return;
+    }
+    
+    start += max_len;
+
 	if (done < 1)
 	{
 		msg_elem.style.color = errorColor;
@@ -451,7 +442,7 @@ function ab_startSearch()
 	var results = searchForNumber(rcp_elem.value);
 	if (results.length > 0)
 	{
-		showMessage(results[0].name)
+		showMessage(results[0].name);
 		var number = results[0].number;
 		number = _strRemove(number,' ');
 		number = _strRemove(number,'(');
@@ -493,16 +484,17 @@ function searchForNumber(str)
 		{
 			showError("Addressbook error!",true);
 		}
-	}
-	else
+	} else {
 		return null;
+    }
 }
 
 function _turnOutputToNumbers(str)
 {
 	var array = new Array();
-	if (!str)
+	if (!str) {
 		return array;
+    }
 	
 	var lines = str.split("\n");
 	

@@ -69,21 +69,21 @@ body
 {
 	color: white;
 	font-weight: bold;
-	font-family: Cracked, Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 }
 
 #recipients-label
 {
 	position: absolute;
-	left: 12px;
+	left: 15px;
 	top: 52px;
 }
 
 #message-label
 {
 	position: absolute;
-	left: 12px;
+	left: 15px;
 	top: 70px;
 }
 
@@ -91,7 +91,6 @@ body
 {
 	/* font-weight: normal; */
 	font-size: 10px;
-	color: #555;
 }
 
 #num-left-label
@@ -181,7 +180,7 @@ body
 #about
 {
 	position: absolute;
-	top: 138px;
+	top: 144px;
 	left: 16px;
 	width: 250px;
 	line-height: 150%;
