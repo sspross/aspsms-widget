@@ -38,3 +38,6 @@ Screenshots
 ![Number Replace](https://github.com/sspross/aspsms-widget/raw/master/screenshots/replace.png)
 
 ![Sent Confirmation](https://github.com/sspross/aspsms-widget/raw/master/screenshots/sent.png)
+
+Author: Silvan Spross, Christoph Studer (Base widget)
+Licensing: Free to use.
