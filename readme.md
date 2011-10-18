@@ -40,4 +40,5 @@ Screenshots
 ![Sent Confirmation](https://github.com/sspross/aspsms-widget/raw/master/screenshots/sent.png)
 
 Author: Silvan Spross, Christoph Studer (Base widget)
+
 Licensing: Free to use.
